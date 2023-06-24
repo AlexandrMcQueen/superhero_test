@@ -19,7 +19,7 @@ const MainPage = () => {
         async function getHeroes(){
             try {
                 setLoading(true)
-                const {data} = await axios.get(`https://hero-server.onrender.com/api/v1/hero`);
+                const {data} = await axios.get(`https://hero-server.onrender.com/api/v1/hero`,{w});
                 setHeroes(data);
 
             } catch (err) {
