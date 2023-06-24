@@ -73,6 +73,13 @@ header a.logo {
     flex-wrap: wrap;
 }
 
+@media  screen and (max-width: 600px) {
+    .heroes_list {
+        justify-content: center;
+    }
+
+}
+
 .heroes_item {
     width: 250px;
     transition: .5s ease-in-out;
