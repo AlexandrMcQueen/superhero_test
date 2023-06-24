@@ -211,7 +211,7 @@ const EditHero = () => {
                     {
                         images && images.map((img,index) => {
                             return ( <div  key={index}>
-                                         <img src={`http://localhost:4000/uploads/${img.filename}`} width={100} height={150}  alt="Image" className='single_image_from_select'/>
+                                         <img src={`https://hero-server.onrender.com/uploads/${img.filename}`} width={100} height={150}  alt="Image" className='single_image_from_select'/>
 
                                              <svg
                                                  onClick={() => deleteImage(img.filename)}
