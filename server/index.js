@@ -20,6 +20,7 @@ app.use(express.json());
 
 app.use(cors({
     origin:['http://localhost:4000','https://hero-client.onrender.com/'],
+    methods:['GET',"PATCH","DELETE","POST"]
 }))
 app.use(morgan('dev'));
 
