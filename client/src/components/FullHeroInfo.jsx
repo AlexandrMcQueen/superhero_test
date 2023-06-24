@@ -15,7 +15,7 @@ const FullHeroInfo = ({}) => {
         async function getHero(){
             try{
                 setLoading(true)
-                const {data} = await axios.get(`http://localhost:4000/api/v1/hero/${id}`);
+                const {data} = await axios.get(`https://hero-server.onrender.com/api/v1/hero/${id}`);
                 setHeroInfo(data);
             } catch (err) {
                 alert(`Error while loading a page`);
