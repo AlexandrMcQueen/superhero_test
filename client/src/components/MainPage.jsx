@@ -1,7 +1,7 @@
 import React, {useEffect, useState} from 'react';
 import TypewriterComponent from "typewriter-effect";
 import SingleHero from "./SingleHero";
-import axios, {post} from "axios";
+import axios from "axios";
 const MainPage = () => {
 
     const [heroes,setHeroes] = useState([]);
@@ -19,7 +19,7 @@ const MainPage = () => {
         async function getHeroes(){
             try {
                 setLoading(true)
-                const {data} = await axios.get(`https://hero-server.onrender.com/api/v1/hero`,{w});
+                const {data} = await axios.get(`https://hero-server.onrender.com/api/v1/hero`);
                 setHeroes(data);
 
             } catch (err) {
