@@ -24,7 +24,7 @@ const EditHero = () => {
     useEffect(() => {
         async function getHero(){
             try{
-                const {data} = await axios.get(`http://localhost:4000/api/v1/hero/${id}`);
+                const {data} = await axios.get(`https://hero-server.onrender.com/api/v1/hero/${id}`);
                 setNickname(data.nickname);
                 setRealName(data.realname);
                 setDescription(data.description);
@@ -97,7 +97,7 @@ const EditHero = () => {
                 method:"PATCH",
                 data:formData,
                 headers:{"Content-Type": "multipart/form-data"},
-                url:`http://localhost:4000/api/v1/hero`,
+                url:`https://hero-server.onrender.com/api/v1/hero`,
 
             })
 
@@ -118,7 +118,7 @@ const EditHero = () => {
             setImages((prevImages) => prevImages.filter((img) => img.filename !== filename));
 
             // Delete the image on the server
-            await axios.delete(`http://localhost:4000/api/hero/${id}/images/${filename}`);
+            await axios.delete(`https://hero-server.onrender.com/api/hero/${id}/images/${filename}`);
 
             // Update the array of images on the frontend
         } catch (error) {

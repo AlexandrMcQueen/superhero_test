@@ -1,5 +1,4 @@
 import Hero from "../models/HeroModel.js";
-import * as fs from "fs";
 
 
 export const ListOfHeroes =  async (req,res) => {

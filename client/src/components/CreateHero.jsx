@@ -50,7 +50,7 @@ const CreateHero = () => {
                 method:"POST",
                 data:formData,
                 headers:{"Content-Type": "multipart/form-data"},
-                url:'http://localhost:4000/api/v1/hero',
+                url:'https://hero-server.onrender.com/api/v1/hero',
 
             })
             alert(`Success`);

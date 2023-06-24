@@ -30,7 +30,7 @@ const FullHeroInfo = ({}) => {
 
     const deleteHero =  async () => {
         try {
-            const hero = await axios.delete(`http://localhost:4000/api/v1/hero/${id}`);
+            const hero = await axios.delete(`https://hero-server.onrender.com/api/v1/hero/${id}`);
             alert(`Hero deleted successfully!`);
             setRedirect(true);
         } catch (err) {
@@ -72,7 +72,7 @@ const FullHeroInfo = ({}) => {
                     {
                         images.map((img) => {
                             return   <div className='single_image'>
-                                         <img src={`http://localhost:4000/uploads/`+ img.filename} alt=""/>
+                                         <img src={`https://hero-server.onrender.com/uploads/`+ img.filename} alt=""/>
                                      </div>
                         })
                     }
